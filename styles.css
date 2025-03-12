@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    line-height: 1.2; /* Adjusted line spacing */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    line-height: 1.2; /* Adjusted line spacing */
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #2196F3;
+    border-bottom: 2px solid #2196F3;
+    padding-bottom: 10px;
+    line-height: 1.2; /* Adjusted line spacing */
+}
+
+h3 {
+    margin-left: 20px;
+    font-size: 1.5em;
+    color: #FF9800;
+    border-bottom: 1px solid #FF9800;
+    padding-bottom: 5px;
+    line-height: 1.2; /* Adjusted line spacing */
+}
+
+h4 {
+    margin-left: 40px;
+    font-size: 1.2em;
+    color: #9C27B0;
+    line-height: 1.2; /* Adjusted line spacing */
+}
+
+p {
+    margin-left: 60px;
+    font-size: 1em;
+    color: #bbbbbb; /* Light text color */
+    line-height: 1.2; /* Adjusted line spacing */
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    line-height: 1.2; /* Adjusted line spacing */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#records {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1e1e1e; /* Dark background for records container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    line-height: 1.2; /* Adjusted line spacing */
+}
