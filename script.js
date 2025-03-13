@@ -62,7 +62,7 @@ function displayRecords(records) {
                     const recordElement = document.createElement('p');
                     recordElement.textContent = recordText;
                     container.appendChild(recordElement);
-                    playlistText += `__${record.driver}__ - ${record.time}\n`;
+                    playlistText += `:${record.driver}: __${record.driver}__ - ${record.time}\n`;
 
                     const carElement = document.createElement('p');
                     carElement.textContent = record.car;
