@@ -10,7 +10,7 @@ function processCSV(data) {
     const records = {};
 
     rows.forEach(row => {
-        const [classType, playlist, race, driver, time, car] = row.split(',');
+        const [classType, playlist, race, driver, time, record, car] = row.split(',');
         if (!records[classType]) {
             records[classType] = {};
         }
@@ -19,7 +19,7 @@ function processCSV(data) {
             records[classType][playlistKey] = {};
         }
         if (!records[classType][playlistKey][race] || records[classType][playlistKey][race].time > time) {
-            records[classType][playlistKey][race] = { driver, time, car };
+            records[classType][playlistKey][race] = { driver, time, record, car };
         }
     });
 
@@ -58,11 +58,18 @@ function displayRecords(records) {
                     }
 
                     const record = records[classType][playlist][race];
-                    const recordText = `${record.driver} - ${record.time}`;
+                    let recordText = `${record.driver} - ${record.time}`;
+                    if (record.record) {
+                        recordText += ` - ${record.record}`;
+                    }
                     const recordElement = document.createElement('p');
                     recordElement.textContent = recordText;
                     container.appendChild(recordElement);
-                    playlistText += `:${record.driver}: __${record.driver}__ - ${record.time}\n`;
+                    playlistText += `:${record.driver}: __${record.driver}__ - ${record.time}`;
+                    if (record.record) {
+                        playlistText += ` - _***${record.record}***_`;
+                    }
+                    playlistText += `\n`;
 
                     const carElement = document.createElement('p');
                     carElement.textContent = record.car;
